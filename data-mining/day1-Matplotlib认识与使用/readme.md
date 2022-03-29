@@ -1,5 +1,5 @@
-Malplotlib绘制折线图
+Malplotlib绘制折线图polt
 散点图
-柱状图
-直方图
-饼图
+柱状图bar
+直方图host
+饼图pie
