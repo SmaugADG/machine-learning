@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression,SGDRegressor,Ridge
 from sklearn.metrics import mean_squared_error
+import joblib
 
 def liner1():
     '''
@@ -86,9 +87,15 @@ def liner3():
     x_train=transfer.fit_transform(x_train)
     x_test=transfer.transform(x_test)
 
-    # 预估器
-    estimator=Ridge()
-    estimator.fit(x_train,y_train)
+    # # 预估器
+    # estimator=Ridge()
+    # estimator.fit(x_train,y_train)
+    #
+    # # 保存模型
+    # joblib.dump(estimator,'my_ridge.pkl')
+
+    # 加载模型
+    estimator=joblib.load("my_ridge.pkl")
 
     # 得出模型
     print("line3权重系数\n",estimator.coef_)
